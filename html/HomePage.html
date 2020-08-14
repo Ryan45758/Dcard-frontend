@@ -69,18 +69,21 @@
                 </div>
             </a>
             <!-- 創建右側下拉鈕 -->
-            <a href="#" class="arrow-btn" title="更多">
+            <a href="#" class="arrow-btn" id="arrow-btn" title="更多" onclick="show_hide">
                 <div class="arrowfont">
                     <i class="fas fa-caret-down"></i>
                 </div>
 
-                <div class="dropdowncontainer">
-                    <!--  <div class="triangle">
+                <div style="display:none;" class="dropdowncontainer">
+                    <div class="triangle">
                         <i class="fas fa-caret-up"></i>
                     </div>
-                -->
+
                     <div class="dropdown">
-                        <a href="#" class="logout">登出</a>
+                        <ul>
+                            <li><a href="RegisterPage.html">&nbsp;登出</a></li>
+                        </ul>
+
                     </div>
                 </div>
             </a>
@@ -90,7 +93,16 @@
 
 
         </div>
-
+        <script>
+            function show_hide() {
+                var click = document.getElementsById("arrow-btn")
+                if (click.style.display === "none") {
+                    click.style.display = "block";
+                } else {
+                    click.style.display = "none";
+                }
+            }
+        </script>
 
 </body>
 
