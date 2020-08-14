@@ -22,10 +22,11 @@
     }
     
     .logosearch {
-        width: 880px;
+        width: 101.5%;
         height: 100%;
         padding: 0px 16px;
         position: relative;
+        left: 1.5%;
     }
     
     .logo {
@@ -45,7 +46,7 @@
         height: 30px;
         padding: 0px 32px 0px 0px;
         display: inline-block;
-        top: -9px;
+        top: -18px;
         /* 搭配垂直置中使用 */
         position: relative;
         font-size: 14px;
@@ -58,19 +59,18 @@
     }
     
     .search-inp {
-        width: 562px;
+        width: 89.59%;
         height: 26px;
         border: 1px solid #00588A;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
         background-color: #00588A;
-        position: absolute;
-        top: 0px;
         font-size: 14px;
         color: white;
         font-family: Microsoft JhengHei;
         outline: none;
         padding-left: 8px;
+        position: relative;
     }
     
     .search-btn {
@@ -88,6 +88,10 @@
         /* 輸入框樣式 */
         outline: none;
         font-size: 13px;
+        cursor: pointer;
+        position: relative;
+        top: -1.5px;
+        left: -3.5px;
     }
     
      ::-webkit-input-placeholder {
@@ -97,27 +101,25 @@
     }
     
     .post-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
         width: 60px;
         height: 48px;
         font-size: 19.17px;
-        left: 15px;
         /* 搭配垂直置中使用 */
         position: relative;
+        left: 20px;
         padding: 0px;
         outline: none;
     }
     
     .bell-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
-        width: 60px;
+        width: 67.04px;
         height: 48px;
         font-size: 19.17px;
-        left: 15px;
+        left: 9%;
         /* 搭配垂直置中使用 */
         position: relative;
         outline: none;
@@ -125,13 +127,12 @@
     }
     
     .card-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
-        width: 60px;
+        width: 67.04px;
         height: 48px;
         font-size: 19.17px;
-        left: 15px;
+        left: 9%;
         /* 搭配垂直置中使用 */
         position: relative;
         outline: none;
@@ -139,13 +140,12 @@
     }
     
     .mail-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
-        width: 60px;
+        width: 67.04px;
         height: 48px;
         font-size: 19.17px;
-        left: 15px;
+        left: 9%;
         /* 搭配垂直置中使用 */
         position: relative;
         outline: none;
@@ -153,13 +153,12 @@
     }
     
     .profile-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
-        width: 60px;
+        width: 67.04px;
         height: 48px;
         font-size: 19.17px;
-        left: 15px;
+        left: 9%;
         /* 搭配垂直置中使用 */
         position: relative;
         outline: none;
@@ -167,7 +166,6 @@
     }
     
     .arrow-btn {
-        background-color: #006AA6;
         border: none;
         color: #ffffff;
         width: 28px;
@@ -175,6 +173,7 @@
         font-size: 19.17px;
         /* 搭配垂直置中使用 */
         position: relative;
+        left: 9%;
         outline: none;
         padding: 0px;
     }
@@ -183,7 +182,6 @@
     .bellfont,
     .mailfont,
     .profilefont,
-    .arrowfont,
     .cardfont {
         width: 20px;
         height: 19.16px;
@@ -191,4 +189,34 @@
         top: 30%;
         left: 30%;
         text-align: center;
+    }
+    
+    .arrowfont {
+        width: 20px;
+        height: 19.16px;
+        position: absolute;
+        top: 30%;
+        left: 70%;
+        text-align: center;
+    }
+    
+    .dropdowncontainer {
+        width: 14%;
+        height: 100px;
+        position: relative;
+        top: 48px;
+        left: -131px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    
+    .triangle {
+        position: relative;
+        top: -20.5px;
+        font-size: 30px;
+        left: 125px;
+    }
+    
+    .dropdown {
+        padding: 6px 0px;
     }
