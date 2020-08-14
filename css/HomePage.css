@@ -26,6 +26,7 @@ body {
     height: 100%;
     padding: 0px 16px;
     position: relative;
+    left: 18px;
 }
 
 .logo {
@@ -58,7 +59,7 @@ body {
 }
 
 .search-inp {
-    width: 562px;
+    width: 86%;
     height: 26px;
     border: 1px solid #00588A;
     border-top-left-radius: 4px;
@@ -78,7 +79,7 @@ body {
     height: 30px;
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 593px;
     padding: 0px;
     border: 1px solid #00588A;
     border-top-right-radius: 4px;
@@ -99,10 +100,10 @@ body {
 .post-btn {
     border: none;
     color: #ffffff;
-    width: 63.8px;
+    width: 60px;
     height: 48px;
     font-size: 19.17px;
-    left: 75px;
+    left: 21px;
     /* 搭配垂直置中使用 */
     position: relative;
     padding: 0px;
@@ -112,10 +113,10 @@ body {
 .bell-btn {
     border: none;
     color: #ffffff;
-    width: 63.8px;
+    width: 60px;
     height: 48px;
     font-size: 19.17px;
-    left: 75px;
+    left: 21px;
     /* 搭配垂直置中使用 */
     position: relative;
     outline: none;
@@ -125,10 +126,10 @@ body {
 .card-btn {
     border: none;
     color: #ffffff;
-    width: 63.8px;
+    width: 60px;
     height: 48px;
     font-size: 19.17px;
-    left: 75px;
+    left: 21px;
     /* 搭配垂直置中使用 */
     position: relative;
     outline: none;
@@ -138,10 +139,10 @@ body {
 .mail-btn {
     border: none;
     color: #ffffff;
-    width: 63.8px;
+    width: 60px;
     height: 48px;
     font-size: 19.17px;
-    left: 75px;
+    left: 21px;
     /* 搭配垂直置中使用 */
     position: relative;
     outline: none;
@@ -151,10 +152,10 @@ body {
 .profile-btn {
     border: none;
     color: #ffffff;
-    width: 63.8px;
+    width: 60px;
     height: 48px;
     font-size: 19.17px;
-    left: 75px;
+    left: 21px;
     /* 搭配垂直置中使用 */
     position: relative;
     outline: none;
@@ -171,51 +172,77 @@ body {
     position: relative;
     outline: none;
     padding: 0px;
-    left: 68px;
+    left: 15px;
 }
 
 .postfont,
 .bellfont,
 .mailfont,
-.profilefont,
 .arrowfont,
+.profilefont,
 .cardfont {
     width: 20px;
     height: 19.16px;
     position: absolute;
     top: 30%;
     left: 30%;
-    text-align: center;
 }
 
 .dropdowncontainer {
-    width: 100px;
-    background-color: #ffffff;
-    position: relative;
-    top: 48px;
-    left: -16px;
+    width: 70px;
+    background-color: white;
     border-radius: 10px;
+    position: relative;
+    top: 32px;
+    left: -30px;
 }
 
-.dropdown ul li a {
+.dropdown {
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+    border-radius: 12px;
+}
+
+.logout {
     font-family: Microsoft JhengHei;
     text-decoration: none;
     font-size: 14px;
     color: black;
     position: relative;
-    top: -20px;
-    left: -30px;
-}
-
-.dropdown ul li {
-    list-style-type: none
+    display: inline-flex
 }
 
 .triangle {
-    position: relative;
+    position: absolute;
     top: -20px;
+    left: 43px;
     font-size: 30px;
     height: 20px;
     width: 20px;
     cursor: default;
+    color: white;
+}
+
+.arrowbtn {
+    display: block;
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+
+.dropdown ul li a:hover {
+    background-color: pink;
+}
+
+.logoutdiv {
+    width: 100%;
+    height: 20px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.logoutdiv :hover {
+    background-color: pink;
+    border-radius: 12px;
 }
