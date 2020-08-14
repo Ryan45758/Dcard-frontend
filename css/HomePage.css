@@ -17,9 +17,8 @@
         width: 1280px;
         height: 100%;
         display: flex;
-        margin: 0 auto;
+        margin: auto;
         padding: 0px 20px;
-        position: relative;
     }
     
     .logosearch {
@@ -189,6 +188,7 @@
         width: 20px;
         height: 19.16px;
         position: absolute;
-        top: 15px;
+        top: 30%;
+        left: 30%;
         text-align: center;
     }
