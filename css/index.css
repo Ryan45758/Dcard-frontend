@@ -1,15 +1,15 @@
 body {
     margin: 0px;
-    overflow: scroll;
-    overflow-x: hidden;
     background-color: #00324E;
     position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .top-bar-wrapper {
     width: 100%;
-    background-color: #006AA6;
     height: 48px;
+    background-color: #006AA6;
     margin: 0 auto;
     display: inline-block;
 }
