@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <input type="text" name="phone" id="phone" onblur="checknull(this)" />
+
+    <input type="text" name="phone" id="phone" onblur="checknull(this)" />
+    <input type="text" name="phone" id="phone" onblur="checknull(this)" />
+    <input type="text" name="phone" id="phone" onblur="checknull(this)" />
+
+    <script>
+        function checknull(id) {
+            var display = document.getElementById("display");
+            if (id.value == "") {
+                display.innerHTML = "不可為空，請輸入!"
+                id.focus();
+            } else {
+                display.innerHTML = ""
+            }
+        }
+    </script>
+</body>
+
+</html>

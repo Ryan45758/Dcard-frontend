@@ -119,13 +119,15 @@ body {
     height: 800px;
     /* 讓register-wrapper遠離topbar */
     margin-top: 48px;
+    display: inline-block;
 }
 
-.register-content {
+.show-content {
     width: 1140px;
     height: 876px;
     padding: 50px 0px;
     margin: auto;
+    display: flex;
 }
 
 .img-content {
@@ -171,4 +173,306 @@ body {
     margin: 0px 0px 20px;
     color: #3397CF;
     margin-top: 30px;
+}
+
+.register-content-wrapper {
+    width: 460px;
+    height: 798.8px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+
+.register-content {
+    width: 360px;
+    height: 595.2px;
+    padding: 30px 50px;
+    display: block;
+}
+
+.start-use {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+}
+
+.register-area {
+    width: 360px;
+    height: 540px;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+}
+
+.register-btn {
+    display: block;
+    height: 166px;
+    width: 360px;
+    font-family: Microsoft JhengHei;
+}
+
+.fb-register {
+    font-size: 14px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    width: 360px;
+    height: 42px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    padding: 0px 16px;
+    background: rgb(66, 95, 156);
+    text-align: center;
+    font-family: Microsoft JhengHei;
+}
+
+.google-register {
+    font-size: 14px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    width: 360px;
+    height: 42px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    padding: 0px 16px;
+    background: white;
+    text-align: center;
+    margin-top: 20px;
+    border-color: #D9D9D9;
+    font-family: Microsoft JhengHei;
+}
+
+.apple-register {
+    font-size: 14px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    width: 360px;
+    height: 42px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    padding: 0px 16px;
+    background: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Microsoft JhengHei;
+}
+
+.use-fb {
+    text-align: center;
+    flex: 1 1 0%;
+    padding: 12px;
+    font-family: Microsoft JhengHei;
+}
+
+.use-google {
+    text-align: center;
+    flex: 1 1 0%;
+    padding: 12px;
+    font-family: Microsoft JhengHei;
+}
+
+.use-apple {
+    text-align: center;
+    flex: 1 1 0%;
+    padding: 12px;
+    font-family: Microsoft JhengHei;
+}
+
+.line {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #D4A6A6;
+    margin: 20px 0px;
+    height: 16px;
+}
+
+.line hr {
+    border: 1px solid #D9D9D9;
+}
+
+.input-area {
+    height: 305.111px;
+}
+
+.input-area form {
+    height: 305.200px;
+}
+
+.email {
+    height: 92.800px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.often-email-border {
+    width: 360px;
+    height: 92.800px;
+}
+
+.often-email {
+    width: 360px;
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.email-input {
+    width: 364px;
+    height: 44px;
+}
+
+.email-border {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    width: 336px;
+    height: 42px;
+    padding: 0px 13px;
+    font-size: 15px;
+}
+
+.mustwrite-1 {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(234, 92, 92);
+    padding: 0px 14px;
+}
+
+.password {
+    height: 124.40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.often-password {
+    width: 360px;
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.often-password-border {
+    width: 360px;
+    height: 92.800px;
+}
+
+.password-input {
+    width: 364px;
+    height: 44px;
+    font-family: Microsoft JhengHei;
+}
+
+.password-border {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    width: 336px;
+    height: 42px;
+    padding: 0px 13px;
+    font-size: 15px;
+}
+
+.mustwrite-2 {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(234, 92, 92);
+    padding: 0px 14px;
+}
+
+.show-password-area {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 10px;
+    user-select: none;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.show-password {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin: 0px 8px;
+    font-size: 16px;
+}
+
+.notgetvalidation {
+    color: rgb(51, 151, 207);
+    font-size: 14px;
+    cursor: pointer;
+    width: 84px;
+    height: 14px;
+    line-height: 1.15;
+    margin-left: 96px;
+}
+
+.or {
+    line-height: 1.5px;
+    margin: 0px 5px;
+}
+
+.forget-passowrd {
+    color: rgb(51, 151, 207);
+    font-size: 14px;
+    cursor: pointer;
+    width: 56px;
+    height: 14px;
+    line-height: 1.15;
+}
+
+.submit {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 500;
+    height: var(--button-size-customized, var(--button-size));
+    line-height: var(--button-size-customized, var(--button-size));
+    pointer-events: none;
+    --button-size: 44px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    text-decoration: none;
+    padding: 0px 1em;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    border-radius: 10px;
+    width: 360px;
+    background: rgb(223, 223, 223);
+}
+
+.bottom-background {
+    height: 145px;
+    width: 460x;
+    background: rgb(239, 239, 239);
 }

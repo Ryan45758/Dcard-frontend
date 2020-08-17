@@ -44,15 +44,103 @@
     </div>
 
     <div class="register-wrapper">
-        <div class="register-content">
+        <!-- 創建左側展示區 -->
+        <div class="show-content">
             <div class="img-content">
                 <img src="../img/contend-img.svg">
                 <h1>年輕人都在 Dcard 上討論</h1>
                 <p>不想錯過任何有趣的話題嗎？<br>趕快加入我們吧！</p>
                 <a>先看討論區</a>
+
+            </div>
+            <!-- 創建右側輸入區 -->
+            <div class="register-content-wrapper">
+                <div class="register-content">
+                    <div class="start-use">開始使用</div>
+                    <div class="register-area">
+                        <!-- 創建三顆登入杻 -->
+                        <div class="register-btn">
+                            <button type="button" class="fb-register">
+                                <i class="fab fa-facebook-square"></i>
+                                <div class="use-fb">
+                                    使用Facebook註冊 / 登入
+                                </div>
+                            
+                            </button>
+                            <button type="button" class="google-register">
+                                <i class="fab fa-google"></i>
+                                <div class="use-google">
+                                    使用Google註冊 / 登入
+                                </div>
+                            </button>
+                            <button type="button" class="apple-register">
+                                <i class="fab fa-apple"></i>
+                                <div class="use-apple">
+                                    使用Apple註冊 / 登入
+                                </div>
+                            </button>
+                        </div>
+                        <!-- 中間分隔線 -->
+                        <div class="line">
+                            <hr size="2px" align="left" width="160px"> 或
+                            <hr size="2px" align="right" width="160px">
+                        </div>
+                        <!-- 輸入帳號密碼區 -->
+                        <div class="input-area">
+                            <form>
+                                <!-- 創建輸入email框 -->
+                                <div class="email">
+                                    <label class="often-email-border">
+                                        <div class="often-email">常用信箱</div>
+                                        <div class="email-input">
+                                            <input type="email" class="email-border" value="">
+                                        </div>
+                                        <div class="mustwrite-1">此欄位為必填</div>
+                                    </label>
+                                </div>
+                                <!-- 創建輸入password框 -->
+                                <div class="password">
+                                    <label class="often-password-border">
+                                            <div class="often-password">密碼</div>
+
+                                            <div class="password-input">
+                                                <input type="password" class="password-border" id="pwd">
+                                            </div>
+                                            <div class="mustwrite-2">此欄位為必填</div>
+                                        </label>
+
+                                    <div class="show-password-area">
+                                        <label class="show-password">
+                                            <input type="checkbox" onclick="ShowPwd()" value="">顯示密碼
+                                        </label>
+                                        <div class="notgetvalidation">未收到驗證信</div>
+                                        <div class="or"> 或 </div>
+                                        <div class="forget-passowrd">忘記密碼</div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="submit">註冊/登入</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom-background">
+
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function ShowPwd() {
+            var x = document.getElementById("pwd");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </body>
 
 </html>
