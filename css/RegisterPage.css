@@ -445,7 +445,7 @@ body {
     line-height: 1.15;
 }
 
-.submit {
+.login-submit {
     display: inline-block;
     position: relative;
     user-select: none;
@@ -454,18 +454,13 @@ body {
     font-weight: 500;
     height: var(--button-size-customized, var(--button-size));
     line-height: var(--button-size-customized, var(--button-size));
-    pointer-events: none;
     --button-size: 44px;
     font-size: 16px;
     color: rgb(255, 255, 255);
     outline: none;
     text-decoration: none;
     padding: 0px 1em;
-    border-width: initial;
     border-style: none;
-    border-color: initial;
-    border-image: initial;
-    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s;
     border-radius: 10px;
     width: 360px;
     background: rgb(223, 223, 223);
