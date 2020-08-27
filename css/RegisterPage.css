@@ -398,6 +398,7 @@ body {
     padding: 0px 14px;
 }
 
+
 .show-password-area {
     display: flex;
     -webkit-box-align: center;
@@ -443,6 +444,15 @@ body {
     width: 56px;
     height: 14px;
     line-height: 1.15;
+}
+
+.alert-message {
+    margin-top: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(234, 92, 92);
+    padding: 0px 14px;
 }
 
 .login-submit {
