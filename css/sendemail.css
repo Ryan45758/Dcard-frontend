@@ -203,3 +203,14 @@ li.dropdown {
     text-align: center;
     font-size: 18px;
 }
+
+.notget {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.notget a {
+    color: #3397CF;
+    text-decoration: none;
+    font-family: Microsoft JhengHei;
+}
