@@ -1,32 +1,17 @@
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-    /*For IE 6&7 only*/
-}
-
 body {
     margin: 0px;
     background-color: #00324E;
-    position: relative;
-    overflow: scroll;
-    overflow-x: hidden;
+    display: block;
 }
 
 .top-bar-wrapper {
-    width: 100%;
     background-color: #006AA6;
+    width: 100%;
+    top: 0;
     height: 48px;
     margin: 0 auto;
-    display: inline-block;
+    overflow: hidden;
+    position: fixed;
 }
 
 .top-bar {
@@ -169,4 +154,90 @@ li.dropdown {
 
 .show {
     display: block;
+}
+
+.body-content {
+    width: 1260px;
+    height: 5093.580px;
+    margin: 0px 119.6px;
+    margin: 0 auto;
+    padding: 48px 20px 0px 0px;
+    background-color: transparent;
+    color: blanchedalmond;
+    font-size: 50px;
+    font-family: 微軟正黑體;
+    position: relative;
+}
+
+.kanban-list {
+    width: 208px;
+    height: 100%;
+    background-color: transparent;
+}
+
+.all-kanban-link {
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    color: wheat;
+}
+
+.all-kanban {
+    width: 178px;
+    height: 44px;
+    padding: 0px 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#font {
+    color: white;
+    font-size: 18px;
+}
+
+.kanban-container {
+    width: 220px;
+}
+
+.mylove-kanban {
+    width: 179.1px;
+    font-size: 14px;
+    display: block;
+}
+
+.mylove {
+    width: 179.1px;
+    font-size: 14px;
+    height: 44px;
+    color: #547688;
+    line-height: 50px;
+    padding: 0px 20px;
+}
+
+.kanban-mylove {
+    width: 178.636px;
+    height: 44px;
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.kanban-mylove img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 8px;
+}
+
+.kanban-text {
+    font-size: 16px;
+    width: 179.1px;
+    height: 44px;
+}
+
+#font-1 {
+    float: right;
+    font-size: 20px;
+    margin-top: 12px;
 }

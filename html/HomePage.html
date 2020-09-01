@@ -4,11 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dcard</title>
     <link href="../css/HomePage.css" rel="stylesheet" />
     <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
     <script src="../font.js"></script>
-
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
+    <!--modal必要順序不能錯-->
+    <script src="../js/bootstrap_modal.js"></script>
+    <link href="../css/bootstrap_modal.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -40,7 +44,7 @@
 
             </div>
 
-            <div class="btngroup clearfix">
+            <div class="btngroup ">
                 <ul>
                     <li>
                         <a href="javascript:;" class="post-btn" title="發文">
@@ -80,29 +84,60 @@
 
 
         </div>
+    </div>
+    <div class="body-content">
+        <div class="kanban-list">
+            <a href="" class="all-kanban-link">
 
-        <script>
-            /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                            toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
+                <div class="all-kanban"><i class="fas fa-list-alt" id="font"></i> &nbsp;所有看板</div>
+            </a>
+            <div class="kanban-container">
+                <div class="mylove">
+                    我追蹤的看板
+                </div>
+                <a href="" class="kanban-mylove">
+                    <div class="kanban-text">
+                        <img src="../img/kanban_icon.jpeg"> 感情
+                    </div>
+                </a>
+                <a href="" class="kanban-mylove">
+                    <div class="kanban-text">
+                        <img src="../img/kanban_icon.jpeg"> 東海大學
+                    </div>
+                </a>
+                <a href="" class="kanban-mylove">
+                    <div class="kanban-text">
+                        <img src="../img/kanban_icon.jpeg"> 軟體工程
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(e) {
-                if (!e.target.matches('.dropbtn')) {
+    <script>
+        /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    for (var d = 0; d < dropdowns.length; d++) {
-                        var openDropdown = dropdowns[d];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var d = 0; d < dropdowns.length; d++) {
+                    var openDropdown = dropdowns[d];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
                 }
             }
-        </script>
-
+        }
+    </script>
+    <script src="/bootstrap/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/bootstrap-4.5.2-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="/bootstrap/bootstrap-4.5.2-dist/js/jspopper.min.js"></script>
 </body>
 
 </html>

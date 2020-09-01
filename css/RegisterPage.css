@@ -398,7 +398,6 @@ body {
     padding: 0px 14px;
 }
 
-
 .show-password-area {
     display: flex;
     -webkit-box-align: center;
@@ -480,4 +479,48 @@ body {
     height: 145px;
     width: 460x;
     background: rgb(239, 239, 239);
+}
+
+.dialog {
+    font-family: 微軟正黑體;
+    border: none;
+    border-radius: 14px;
+    position: fixed;
+    padding: 40px 40px 24px 40px;
+    width: 320px;
+    height: 193.2px;
+}
+
+.dialog p {
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 0px 12px 0px;
+    margin: 0px;
+}
+
+.dialog input {
+    width: 292px;
+    height: 42px;
+    padding: 0px 13px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.btn {
+    padding: 5px;
+    float: right;
+}
+
+.btn button {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-family: 微軟正黑體;
+    color: #D9D9;
+    outline: none;
+    cursor: pointer;
+    margin-top: 40px;
 }
