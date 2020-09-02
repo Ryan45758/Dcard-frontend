@@ -44,7 +44,7 @@
 
             </div>
 
-            <div class="btngroup ">
+            <div class="btngroup clearfix">
                 <ul>
                     <li>
                         <a href="javascript:;" class="post-btn" title="發文">
@@ -85,38 +85,40 @@
 
         </div>
     </div>
-    <div class="body-content">
-        <div class="kanban-list">
-            <a href="" class="all-kanban-link">
+    <div class="body-wrapper">
+        <div class="body-content">
+            <div class="kanban-list">
+                <a href="" class="all-kanban-link">
 
-                <div class="all-kanban"><i class="fas fa-list-alt" id="font"></i> &nbsp;所有看板</div>
-            </a>
-            <div class="kanban-container">
-                <div class="mylove">
-                    我追蹤的看板
+                    <div class="all-kanban"><i class="fas fa-list-alt" id="font"></i> &nbsp;所有看板</div>
+                </a>
+                <div class="kanban-container">
+                    <div class="mylove">
+                        我追蹤的看板
+                    </div>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 感情
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 東海大學
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 軟體工程
+                        </div>
+                    </a>
                 </div>
-                <a href="" class="kanban-mylove">
-                    <div class="kanban-text">
-                        <img src="../img/kanban_icon.jpeg"> 感情
-                    </div>
-                </a>
-                <a href="" class="kanban-mylove">
-                    <div class="kanban-text">
-                        <img src="../img/kanban_icon.jpeg"> 東海大學
-                    </div>
-                </a>
-                <a href="" class="kanban-mylove">
-                    <div class="kanban-text">
-                        <img src="../img/kanban_icon.jpeg"> 軟體工程
-                    </div>
-                </a>
             </div>
         </div>
     </div>
 
     <script>
         /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
