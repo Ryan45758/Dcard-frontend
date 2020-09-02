@@ -20,13 +20,14 @@ body {
 }
 
 .top-bar-wrapper {
-    background-color: transparent;
+    background-color: #006AA6;
     width: 100%;
     top: 0;
     height: 48px;
     margin: 0 auto;
     overflow: hidden;
     position: fixed;
+    z-index: 1;
 }
 
 .top-bar {
@@ -186,7 +187,6 @@ li.dropdown {
 
 .body-content {
     width: 1260px;
-    height: 5093.580px;
     margin: 0px 119.6px;
     margin: 0 auto;
     background-color: transparent;
@@ -267,4 +267,23 @@ li.dropdown {
     float: right;
     font-size: 20px;
     margin-top: 12px;
+}
+
+.article-wrapper {
+    position: relative;
+    margin-left: 200px;
+    background-color: transparent;
+    width: 752px;
+    height: 800px;
+    padding: 20px 0px 0px 0px;
+}
+
+.article-area {
+    width: 728px;
+    height: 800px;
+    margin: 0px 12px;
+    background-color: white;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 20px;
+    color: black;
 }
