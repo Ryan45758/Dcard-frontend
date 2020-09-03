@@ -2,86 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/HomePage.css" rel="stylesheet" />
-    <link href="/bootstrap/css/bootstrap.min.css" / rel="stylesheet" type="text/css">
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- 創建外圍容器 -->
-    <div class="top-bar-wrapper">
-        <!-- 創建內部容器 -->
-        <div class="top-bar">
-            <!-- 創建左側容器 -->
-            <div class="logosearch">
-                <!-- 插入logo圖片 -->
-                <div class="logo" width: 75px; height: 48px;>
-                    <a title="Dcard" class="dcard_logo" href="HomePage.html">
-                        <img src="../img/DcardLogo.svg" width: 74.43px height: 28px alt="Dcard">
-                    </a>
-                </div>
-                <!-- 創建搜尋列容器 -->
-                <div class="search-wrapper">
-                    <form class="search" action="#">
-                        <!-- 創建搜尋輸入框 -->
-                        <input class="search-inp" type="text" placeholder="搜尋 未定事件簿">
-                        <!-- 創建搜尋鈕 -->
-                        <button class="search-btn" onclick="">
-                            <i class="far fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-
-
-            </div>
-
-            <div class="btngroup clearfix">
-                <ul>
-                    <li>
-                        <a href="javascript:;" class="post-btn" title="發文">
-                            <i class="fas fa-pen"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="bell-btn" title="通知">
-                            <i class="fas fa-bell"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="card-btn" title="抽卡">
-                            <i class="far fa-file-user"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="mail-btn" title="訊息">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="profile-btn" title="個人資料">
-                            <i class="fas fa-user"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()" title="更多">
-                            ▼
-                        </a>
-                        <div class="dropdown-content" id="myDropdown">
-                            <a href="index.html" class="logout">登出</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
+    </nav>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+  </button>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    這位阿姨是在我大一時打工的早餐店員工 其實他年紀已經很大了（最年長員工🤣） 家裡也不缺錢 只是喜歡來早餐店上班打發時間 我們早餐店是在學校的餐廳裡面 過了中午之後 那位阿姨就會變成整個餐廳負責打掃的人 算是兼職吧？ 我只記得我整天都可以看到他 我們早餐店裡面有大概三～四個工讀生 我是最不得寵的那個哈哈 因為我的動作很慢 而且跟當初說好的上班時間不一樣 （我是夜校，當初說好八點上班，但每天都叫我四點以前要到🙃） 每天睡不到三小時 身體狀況變得很差很差 時不時就發燒感冒😷 那位阿姨基本上每天都會偷偷來找我聊天
+                    （為什麼要偷偷呢，因為被發現的話會被老闆痛罵🙃） 有時候會陪著我一起去倒垃圾 有時候會幫我把我該做的事情直接做好 讓我能多休息一點 有時候也會在我被罵的時候跳出來幫我講話 有時候會偷偷的塞一堆甜點給我 說是給我補身體（誰會吃甜點補身體啦😂） 總之，他對我就是比對其他工讀生還要好🥰 他常常說我跟他孫子們很像 總是默默的做自己的事 被罵被唸也默默的承受 所以他把我當成他的孫女看待 我每次聽到他這樣說 心裡都超級超級感動 我也把他當成我自己的阿嬤 不只是因為他對我很好
+                    而是...他真的長得跟我過世的阿嬤超像...... 我每天上班都很期待可以遇到這位阿姨 就算我們都戴著口罩看不太到臉 但他看到我的第一句話永遠都是： 「你今天一樣很可愛喔～」 就算我沒睡飽，整個人無精打采的，他也是會一直說我很可愛😂 某一天早上準備上班的時候 沒有看見阿姨的身影 我有點小失望 問了其他人之後發現阿姨那天請假 全年無休的阿姨突然請假 害我整天上班都覺得少了一點什麼😅 原本以為阿姨只有請一天假 但是後來連續一個禮拜都沒看到他 老闆說阿姨是跟家人出國玩了
+                    所以才沒來上班 但是到了下禮拜 依然沒有看見阿姨出現 我又去問了老闆 這次，老闆沈默了很久很久 只默默的跟我說了一句： 「他去好命了」 我一直以為是家人不讓他工作了 要讓他在家休息或帶他四處走走 享受他後半段的人生 直到我辭職前幾天 （大概半年後） 我聽到其他阿姨們在討論那位阿姨的事情 我才突然發現... 原來，他去當天使了 謝謝你，早餐店的阿姨 謝謝你一直對我那麼好 把我當成自己的孫女在疼 我也一直把你當成我自己的阿嬤喔🥰 我也很愛你喔
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

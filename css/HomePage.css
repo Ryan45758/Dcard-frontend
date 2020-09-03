@@ -1,3 +1,9 @@
+html.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: "";
@@ -25,17 +31,15 @@ body {
     top: 0;
     height: 48px;
     margin: 0 auto;
-    overflow: hidden;
     position: fixed;
     z-index: 1;
 }
 
 .top-bar {
-    width: 1280px;
+    width: 1260px;
     height: 100%;
-    display: flex;
     margin: auto;
-    padding: 0px 20px;
+    display: flex;
 }
 
 .logosearch {
@@ -286,4 +290,55 @@ li.dropdown {
     border-radius: 4px 4px 0px 0px;
     font-size: 20px;
     color: black;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+.top-div {
+    width: 608px;
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    float: left;
+}
+
+.top-div div {
+    min-width: 40px;
+    min-height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+}
+
+.all-div:hover {
+    background: rgb(250, 236, 236);
+    border-radius: 14px;
+}
+
+.follow-div:hover {
+    background: rgb(250, 236, 236);
+    border-radius: 14px;
+}
+
+.all {
+    top: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.follow {
+    top: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.article-area hr {
+    border: 0.5px solid #D9D9D9;
 }
