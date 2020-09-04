@@ -116,15 +116,15 @@
             </div>
             <div class="article-wrapper">
                 <div class="article-area">
-                    <div class="top-div">
+                    <div class="top-div" id="top-div">
                         <div class="all-div">
                             <a href="" class="all">全部</a>
                         </div>
                         <div class="follow-div">
                             <a href="" class="follow">追蹤</a>
                         </div>
+                        <hr id="line" size="2px" align="left">
                     </div>
-                    <hr size="2px" align="left" width="99.7%">
                 </div>
                 <!-- end modal -->
             </div>
@@ -136,7 +136,7 @@
 
     <script>
         /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
@@ -155,7 +155,26 @@
             }
         }
     </script>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
 
+        var navbar = document.getElementById("top-div");
+        var sticky = navbar.offsetTop;
+        var line = document.getElementById("line");
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+                line.classList.add("sticky-line");
+            } else {
+                navbar.classList.remove("sticky");
+                line.classList.remove("sticky-line");
+            }
+
+        }
+    </script>
 
 </body>
 
