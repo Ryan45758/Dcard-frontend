@@ -284,10 +284,10 @@ li.dropdown {
 
 .article-area {
     width: 728px;
-    height: 800px;
+    min-height: 550px;
     margin: 0px 12px;
     background-color: white;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 4px 4px;
     font-size: 20px;
     color: black;
 }
@@ -304,7 +304,7 @@ li.dropdown {
     padding-right: 60px;
     float: left;
     z-index: 2;
-    border-bottom: 1px solid rgb(248, 235, 235);
+    border-bottom: 1px solid rgb(238, 226, 226);
     background-color: white;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
@@ -379,9 +379,6 @@ li.dropdown {
 }
 
 #post-zone {
-    border-top-style: dotted;
-    border-top-width: 1px;
-    border-top-color: #F2F2F2;
     /*	margin-left: 100px;
     margin-right: 100px;*/
     height: 157px;
@@ -391,4 +388,77 @@ li.dropdown {
     width: 648px;
     height: 100%;
     margin: 0 auto;
+}
+
+.top {
+    height: 25px;
+    padding-top: 15px;
+    width: 608px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.sex {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.kanban {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #606160;
+}
+
+.college {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #606160;
+}
+
+.title {
+    width: 608px;
+    height: 24px;
+    padding-top: 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.content {
+    width: 608px;
+    height: 20px;
+    padding-top: 10px;
+    color: black;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: -webkit-box;
+}
+
+.bottom {
+    width: 608px;
+    height: 20px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 2px;
+    vertical-align: middle;
+}
+
+.good {
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+}
+
+.comment {
+    width: 200px;
+    height: 20px;
+    color: rgb(161, 158, 158);
+    font-size: 14px;
+    display: inline-block;
 }
