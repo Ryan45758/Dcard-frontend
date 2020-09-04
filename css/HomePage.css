@@ -303,6 +303,11 @@ li.dropdown {
     padding-left: 60px;
     padding-right: 60px;
     float: left;
+    z-index: 2;
+    border-bottom: 1px solid rgb(248, 235, 235);
+    background-color: white;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 }
 
 .top-div div {
@@ -366,4 +371,24 @@ li.dropdown {
     position: absolute;
     left: 0px !important;
     top: 70px !important;
+}
+
+.post-space {
+    width: 728px;
+    height: 80px;
+}
+
+#post-zone {
+    border-top-style: dotted;
+    border-top-width: 1px;
+    border-top-color: #F2F2F2;
+    /*	margin-left: 100px;
+    margin-right: 100px;*/
+    height: 157px;
+}
+
+.post {
+    width: 648px;
+    height: 100%;
+    margin: 0 auto;
 }
