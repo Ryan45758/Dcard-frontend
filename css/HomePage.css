@@ -482,6 +482,8 @@ li.dropdown {
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
+    padding-right: 20px;
+    overflow: hidden;
 }
 
 
@@ -492,6 +494,9 @@ li.dropdown {
     margin: auto;
     border: 1px solid #888;
     width: 728px;
+    height: 100%;
+    box-shadow: none;
+    overflow-y: auto;
 }
 
 
@@ -509,4 +514,60 @@ li.dropdown {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-content header {
+    width: 608px;
+    height: 40px;
+    padding: 40px 60px 22px 60px;
+}
+
+.modal-content header img {
+    width: 40px;
+    height: 40px;
+    background: rgb(144, 177, 240);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.modal-college {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #606160;
+}
+
+.article-title {
+    font-size: 28px;
+}
+
+.article-body {
+    height: 100%;
+    width: 608px;
+    padding: 0px 60px 0px 60px;
+}
+
+.article-type-div {
+    height: 16px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.time {
+    display: inline-block;
+    color: rgb(179, 157, 179);
+}
+
+.article-type-div a {
+    text-decoration: none;
+    color: rgb(147, 147, 241);
+}
+
+.atricle-span {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgb(88, 87, 87);
 }
