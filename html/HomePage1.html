@@ -4,13 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dcard</title>
     <link href="../css/HomePage.css" rel="stylesheet" />
     <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
     <script src="../font.js"></script>
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
+    <!--modal必要順序不能錯-->
+    <script src="../js/bootstrap_modal.js"></script>
+    <link href="../css/bootstrap_modal.css" rel="stylesheet" />
 </head>
 
 <body>
+
     <!-- 創建外圍容器 -->
     <div class="top-bar-wrapper">
         <!-- 創建內部容器 -->
@@ -123,19 +129,20 @@
                     <div class="post-space"></div>
                     <article id='post-zone'>
                         <div class="post">
-                            <a href="" class="link" style="display: inline-block; width: 608px; height: 100%; padding:0px 20px; text-decoration: none; border-top-style: solid;
-                            border-top-width: 1px; border-top-color: #e9e5e5;" onclick="modalfunction(); return false;" id="myBtn">
+                            <a href="javascript:;" class="link" style="display: inline-block; width: 608px; height: 100%; padding:0px 20px; text-decoration: none; border-top-style: solid;
+                            border-top-width: 1px;
+                            border-top-color: #e9e5e5;" id="myBtn">
                                 <div class="post-link">
                                     <div class="top">
                                         <div class="sex">
                                             <img src="../img/male.svg" alt="男" style="border-radius: 50%; background-color: rgb(144, 177, 240); width: 20px;height: 20px;">
                                         </div>
-                                        <div class="kanban">閒聊&ensp;·</div>
+                                        <div class="kanban">西斯&ensp;·</div>
                                         <div class="college">東海大學</div>
                                     </div>
                                     <div class="middle">
-                                        <div class="title">五個你可能不知道的美國文化</div>
-                                        <div class="content">前幾天和美國朋友們聊天 聊到臺灣特有又帶點荒謬的迷信和文化 聽我分享完之後他們莫名覺得很有共鳴 還紛紛和我說一些美國也有的類似情況 而聽完後有些事情我覺得非常有趣 所以想在這裡和大家分享 *ฅ´ω`ฅ* / ❶ 聽見別人打噴嚏後的祝福 或許大部份的人都知道美國或是一些歐洲國家 他們只要聽到別人打噴嚏都會說聲 “bless you” bless you這句話感覺上比較接近保重的意思 重點是我覺得美國人對這句話簡直走火入魔
+                                        <div class="title">#二更 西斯版讓我大開眼界</div>
+                                        <div class="content">西斯版果然不愧是低卡最猛的版 有人想看孕婦片 底下直接有孕婦喊play one 刷新我三觀😳😳真的是扯翻天
                                         </div>
                                     </div>
                                     <div class="bottom" style="display: inline-block;">
@@ -153,10 +160,20 @@
                         </div>
                     </article>
 
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
 
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <header>
+                                <img src="../img/male.svg" alt="">
+                                <span class="close">&times;</span>
+                            </header>
+                        </div>
+
+                    </div>
                     <!-- end modal -->
                 </div>
-
             </div>
         </div>
 
@@ -165,16 +182,16 @@
 
     <script>
         /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
         function myFunction() {
-            document.getElementById("myDropdown ").classList.toggle("show ");
+            document.getElementById("myDropdown").classList.toggle("show");
         }
 
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(e) {
             if (!e.target.matches('.dropbtn')) {
 
-                var dropdowns = document.getElementsByClassName("dropdown-content ");
+                var dropdowns = document.getElementsByClassName("dropdown-content");
                 for (var d = 0; d < dropdowns.length; d++) {
                     var openDropdown = dropdowns[d];
                     if (openDropdown.classList.contains('show')) {
@@ -188,48 +205,44 @@
         window.onscroll = function() {
             stickyFunction()
         };
-        var navbar = document.getElementById("top-div ");
+        var navbar = document.getElementById("top-div");
         var sticky = navbar.offsetTop;
 
         function stickyFunction() {
             if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky ");
+                navbar.classList.add("sticky");
             } else {
-                navbar.classList.remove("sticky ");
+                navbar.classList.remove("sticky");
             }
 
         }
     </script>
-
     <script>
         // Get the modal
-        function modalfunction() {
-            var modal = document.getElementById("myModal ");
 
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn ");
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close ")[0];
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-            var objRef = document.body;
-            // When the user clicks the button, open the modal 
-            btn.onclick = function() {
-                modal.style.display = "block ";
-                objRef.style.overflow = "hidden ";
-            }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none ";
-            }
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
 
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none ";
-                }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
         }
     </script>
