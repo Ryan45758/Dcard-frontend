@@ -477,6 +477,7 @@ li.dropdown {
     height: 100%;
     /* Full height */
     overflow: auto;
+    overflow-x: hidden;
     /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
@@ -590,6 +591,37 @@ li.dropdown {
     font-size: 18px;
     padding-left: 4px;
     color: rgb(156, 134, 134);
+}
+
+.heart {
+    padding-top: 4px;
+    float: right;
+    margin-right: 50px;
+    vertical-align: middle;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+
+.heart:hover {
+    color: rgb(255, 66, 66);
+}
+
+.heart-click {
+    color: rgb(255, 66, 66);
+}
+
+.hearted {
+    float: right;
+    margin-right: 50px;
+    color: rgb(207, 207, 207);
+    cursor: pointer;
+    vertical-align: middle;
+    display: none;
+}
+
+.hearted img {
+    width: 24px;
+    height: 24px;
 }
 
 .article-comment {

@@ -186,6 +186,12 @@
                                     <img src="../img/heart.png" style="display: inline-block;">
                                     <div class="heart-count">6071</div>
                                     <div class="article-comment">·&ensp;回應 284</div>
+                                    <div class="heart" onclick="heart()" id="heart">
+                                        <i class="fas fa-heart" class="heart-font"></i>
+                                    </div>
+                                    <div class="hearted" id="hearted">
+                                        <img src="../img/heart.png" alt="">
+                                    </div>
                                 </div>
 
                             </div>
@@ -285,7 +291,18 @@
             }
         }
     </script>
-
+    <script>
+        var heart = document.getElementById("heart");
+        var hearted = document.getElementById("hearted");
+        heart.onclick = function() {
+            heart.style.display = "none";
+            hearted.style.display = "block";
+        }
+        hearted.onclick = function() {
+            hearted.style.display = "none";
+            heart.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
