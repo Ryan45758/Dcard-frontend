@@ -706,8 +706,8 @@ li.dropdown {
 
 .footer {
     width: 100%;
-    height: 150px;
-    background-color: black;
+    height: 125px;
+    background-color: rgb(253, 242, 242);
     z-index: 5;
 }
 
@@ -716,7 +716,7 @@ li.dropdown {
     height: 48px;
     width: 100%;
     background-color: transparent;
-    position: fixed;
+    position: sticky;
     bottom: 0px;
     right: 0px;
     overflow: hidden;
@@ -724,10 +724,10 @@ li.dropdown {
 }
 
 .reply-content {
-    width: 728px;
-    margin: 0 auto;
     height: 48px;
-    background-color: blue;
+    background-color: white;
     overflow-y: auto;
     z-index: 5;
+    padding: 0px 60px;
+    box-shadow: 3px 3px 5px 6px black;
 }
