@@ -1,3 +1,8 @@
+/* male色域   background-color: rgb(144, 177, 240);*/
+
+
+/* female色域 background: rgb(145, 107, 114); */
+
 html.noscroll {
     position: fixed;
     overflow-y: scroll;
@@ -265,6 +270,7 @@ li.dropdown {
     font-size: 16px;
     width: 179.1px;
     height: 44px;
+    vertical-align: middle;
 }
 
 #font-1 {
@@ -405,6 +411,20 @@ li.dropdown {
     vertical-align: middle;
 }
 
+.post-male {
+    border-radius: 50%;
+    background-color: rgb(144, 177, 240);
+    width: 20px;
+    height: 20px;
+}
+
+.post-female {
+    border-radius: 50%;
+    background-color: rgb(145, 107, 114);
+    width: 20px;
+    height: 20px;
+}
+
 .kanban {
     font-size: 14px;
     display: inline-block;
@@ -524,10 +544,18 @@ li.dropdown {
     padding: 40px 60px 22px 60px;
 }
 
-.modal-content header img {
+.modal-male {
     width: 40px;
     height: 40px;
     background: rgb(144, 177, 240);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.modal-female {
+    width: 40px;
+    height: 40px;
+    background: rgb(145, 107, 114);
     border-radius: 50%;
     vertical-align: middle;
 }
@@ -727,4 +755,38 @@ li.dropdown {
     overflow-y: auto;
     padding: 0px 60px;
     box-shadow: 3px 3px 5px 6px black;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.reply-area {
+    position: relative;
+    height: 48px;
+    padding-top: 8px;
+}
+
+.reply-male {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(144, 177, 240);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.reply-female {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(144, 177, 240);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.reply-input {
+    font-family: 微軟正黑體;
+    font-size: 16px;
+    color: rgb(150, 148, 148);
+    display: inline-block;
+    padding-left: 4px;
+    width: 550px;
+    cursor: text;
 }
