@@ -43,7 +43,7 @@
 
 
             </div>
-
+            <!-- 創建top-bar按鈕群組 -->
             <div class="btngroup clearfix">
                 <ul>
                     <li>
@@ -218,16 +218,32 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 創建footer讓回應欄有空間下拉 -->
                             <div class="footer">
                             </div>
-                            <div class="reply">
-                                <div class="reply-content">
+                            <!-- 創建回應欄 -->
+                            <div class="reply" id="reply">
+                                <div class="reply-content" id="reply-content">
                                     <div class="reply-area">
                                         <img src="../img/male.svg" class="reply-male">
                                         <div class="reply-input">
                                             回應...
                                         </div>
                                     </div>
+
+                                </div>
+                                <!-- 放大後回應欄，主要輸入區 -->
+                                <div class="enlarge-area">
+                                    <form class="main-input-form">
+                                        <div class="top-main-input">
+                                            <div class="post-status">
+                                                <img src="../img/male.svg">
+                                                <div class="status-text">選擇發文身分&nbsp;<i class="fas fa-caret-down"></i></div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
                                 </div>
                             </div>
 
@@ -241,11 +257,10 @@
 
 
         <script>
+            //dropdown btn功能
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
-
-            // Close the dropdown if the user clicks outside of it
             window.onclick = function(e) {
                 if (!e.target.matches('.dropbtn')) {
 
@@ -260,6 +275,7 @@
             }
         </script>
         <script>
+            //全部|追蹤的sticky function
             window.onscroll = function() {
                 stickyFunction()
             };
@@ -276,29 +292,23 @@
             }
         </script>
         <script>
-            // Get the modal
-
-            // Get the modal
+            //modal互動式function
             var modal = document.getElementById("myModal");
-
-            // Get the button that opens the modal
             var btn = document.getElementById("myBtn");
-
-            // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks the button, open the modal 
+            // 點擊打開modal
             btn.onclick = function() {
                 modal.style.display = "block";
 
             }
 
-            // When the user clicks on <span> (x), close the modal
+            // 點擊X關閉modal
             span.onclick = function() {
                 modal.style.display = "none";
             }
 
-            // When the user clicks anywhere outside of the modal, close it
+            // 點擊modal以外隱藏modal
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
@@ -306,6 +316,7 @@
             }
         </script>
         <script>
+            //點擊愛心fucnction
             var heart = document.getElementById("heart");
             var hearted = document.getElementById("hearted");
             heart.onclick = function() {
@@ -315,6 +326,15 @@
             hearted.onclick = function() {
                 hearted.style.display = "none";
                 heart.style.display = "block";
+            }
+        </script>
+        <script>
+            //創建點擊回覆彈出框
+            var reply = document.getElementById("reply");
+            var reply_content = document.getElementById("reply-content")
+            reply.onclick = function() {
+                reply.classList.add("enlarge-reply");
+                reply_content.style.display = "none";
             }
         </script>
 </body>

@@ -1,76 +1,126 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        @import url(http://weloveiconfonts.com/api/?family=entypo);
-        /* entypo */
-        
-        [class*="entypo-"]:before {
-            font-family: 'entypo', sans-serif;
-        }
-        
-        html {
-            height: 100%;
-        }
-        
-        body {
-            background: -webkit-radial-gradient(bottom center, #333, #000);
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery pop up</title>
+    <script src=http://blog.soso.com/qz.q/ "jquery.js" type="text/javascript"></script>
+    <style type="text/css">
+        * {
             margin: 0;
             padding: 0;
         }
         
-        #holder {
-            width: 70px;
-            margin: 200px auto;
+        #wrapper {
+            height: 1000px;
         }
         
-        div.box {
-            text-align: center;
-            width: 55px;
-            background-color: #eee;
-            border-radius: 3px;
-            box-shadow: 0 0 10px #000;
-            padding: 3px;
+        #box {
+            display: none;
+            position: absolute;
+            width: 520px;
+            height: 300px;
+            border: #f60 solid 2px;
+            z-index: 200;
+            background: #fff;
         }
         
-        div.box {
-            font-family: arial;
-            font-size: 12px;
-            text-decoration: none;
-            color: #000;
-        }
-        
-        div.box:hover {
+        #closeBtn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
             cursor: pointer;
-            background-color: #fdd;
+        }
+        
+        #greybackground {
+            background: #000;
+            display: block;
+            z-index: 100;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="holder">
-        <div class="box entypo-thumbs-up"> Like</div>
+    <div id="wrapper">
+        <a href=http://blog.soso.com/qz.q/ "#" id="popup">點選彈出div視窗</a>
     </div>
 
+    <div id="box">
+        <span id="closeBtn">關閉</span>
+    </div>
     <script>
-        //Like - Unlike Button
-
-        //Dirty? But its working fine...
-
-        $(function() {
-            $('.box').on('click', function() {
-                if ($(this).text() == ' Like') {
-                    $(this).removeClass('entypo-thumbs-up').addClass('entypo-thumbs-down').text(' Unlike');
-                } else {
-                    $(this).removeClass('entypo-thumbs-down').addClass('entypo-thumbs-up').text(' Like');
-                }
+        $(function() {　　
+            var screenwidth, screenheight, mytop, getPosLeft, getPosTop　　 screenwidth = $(window).width();　　
+            screenheight = $(window).height();　　 //獲取滾動條距頂部的偏移
+            　　
+            mytop = $(document).scrollTop();　　 //計算彈出層的left
+            　　
+            getPosLeft = screenwidth / 2 - 260;　　 //計算彈出層的top
+            　　
+            getPosTop = screenheight / 2 - 150;　　 //css定位彈出層
+            　　
+            $("#box").css({
+                "left": getPosLeft,
+                "top": getPosTop
+            });　　 //當瀏覽器視窗大小改變時...
+            　　
+            $(window).resize(function() {　　
+                screenwidth = $(window).width();　　
+                screenheight = $(window).height();　　
+                mytop = $(document).scrollTop();　　
+                getPosLeft = screenwidth / 2 - 260;　　
+                getPosTop = screenheight / 2 - 150;　　
+                $("#box").css({
+                    "left": getPosLeft,
+                    "top": getPosTop + mytop
+                });　　
             });
+
+            　　 //當拉動滾動條時...
+            　　
+            $(window).scroll(function() {　　
+                screenwidth = $(window).width();　　
+                screenheight = $(window).height();　　
+                mytop = $(document).scrollTop();　　
+                getPosLeft = screenwidth / 2 - 260;　　
+                getPosTop = screenheight / 2 - 150;　　
+                $("#box").css({
+                    "left": getPosLeft,
+                    "top": getPosTop + mytop
+                });　　
+            });
+
+            　　 //點選連結彈出視窗
+            　　
+            $("#popup").click(function() {　　
+                $("#box").fadeIn("fast");　　 //獲取頁面文件的高度
+                　　
+                var docheight = $(document).height();　　 //追加一個層，使背景變灰
+                　　
+                $("body").append("<div id='greybackground'></div>");　　
+                $("#greybackground").css({
+                    "opacity": "0.5",
+                    "height": docheight
+                });　　
+                return false;　　
+            });
+
+            　　 //點選關閉按鈕
+            　　
+            $("#closeBtn").click(function() {　　
+                $("#box").hide();　　 //刪除變灰的層
+                　　
+                $("#greybackground").remove();　　
+                return false;　　
+            });
+
         });
     </script>
-
 </body>
 
 </html>
