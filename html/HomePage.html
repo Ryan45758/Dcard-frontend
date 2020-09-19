@@ -238,15 +238,21 @@
                                         <div class="top-main-input">
                                             <div class="post-status">
                                                 <img src="../img/male.svg">
-                                                <div class="status-text">選擇發文身分&nbsp;<i class="fas fa-caret-down"></i></div>
+                                                <div class="status-text">
+                                                    <select>
+                                                    <option value=""disabled selected hidden >選擇發文身分</option>
+                                                    <option value="0">東海大學</option>
+                                                    <option value="1">東海大學 資訊工程學系</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="main-input">
-                                            <textarea type='text' class="reply-input-area" placeholder='輸入回覆內容 ...'></textarea>
+                                            <textarea type="text" class="reply-input-area" spellcheck="false" placeholder="輸入回覆內容 ..."></textarea>
                                         </div>
                                         <div class="main-btn">
                                             <div class="cs-group">
-                                                <button type="button" class="cancel-btn" id="cancel-btn">取消</button>
+                                                <button type="reset" class="cancel-btn" id="cancel-btn">取消</button>
                                                 <button type="submit" class="submit-btn">送出</button>
                                             </div>
                                         </div>

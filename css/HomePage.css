@@ -127,6 +127,12 @@ body {
     font-size: 15px;
 }
 
+::-webkit-textarea-placeholder {
+    /* Chrome, Safari */
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
 .btngroup {
     float: right;
     width: 390px;
@@ -825,15 +831,25 @@ li.dropdown {
 }
 
 .post-status {
-    width: 154.938px;
+    width: 300px;
     height: 36.8px;
     cursor: pointer;
     padding: 16px 0px;
 }
 
-.status-text {
+.post-status select {
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
     height: 100%;
-    font-size: 15px;
+    border: 0;
+    color: rgb(88, 87, 87);
+}
+
+.status-text {
+    position: relative;
+    top: -8px;
+    height: 100%;
     display: inline-block;
     vertical-align: middle;
     color: rgb(88, 87, 87);
@@ -848,6 +864,10 @@ li.dropdown {
 .reply-input-area {
     height: 100%;
     width: 100%;
+    resize: none;
+    outline: none;
+    line-height: 25px;
+    font-size: 16px;
 }
 
 .main-btn {
