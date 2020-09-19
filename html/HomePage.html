@@ -226,21 +226,29 @@
                                 <div class="reply-content" id="reply-content">
                                     <div class="reply-area">
                                         <img src="../img/male.svg" class="reply-male">
-                                        <div class="reply-input">
+                                        <div class="reply-input" id="reply-input">
                                             回應...
                                         </div>
                                     </div>
 
                                 </div>
                                 <!-- 放大後回應欄，主要輸入區 -->
-                                <div class="enlarge-area">
+                                <div class="enlarge-area" id="enlarge-area">
                                     <form class="main-input-form">
                                         <div class="top-main-input">
                                             <div class="post-status">
                                                 <img src="../img/male.svg">
                                                 <div class="status-text">選擇發文身分&nbsp;<i class="fas fa-caret-down"></i></div>
                                             </div>
-
+                                        </div>
+                                        <div class="main-input">
+                                            <textarea type='text' class="reply-input-area" placeholder='輸入回覆內容 ...'></textarea>
+                                        </div>
+                                        <div class="main-btn">
+                                            <div class="cs-group">
+                                                <button type="button" class="cancel-btn" id="cancel-btn">取消</button>
+                                                <button type="submit" class="submit-btn">送出</button>
+                                            </div>
                                         </div>
                                     </form>
 
@@ -331,10 +339,23 @@
         <script>
             //創建點擊回覆彈出框
             var reply = document.getElementById("reply");
+            var reply_input = document.getElementById("reply-input");
             var reply_content = document.getElementById("reply-content")
-            reply.onclick = function() {
+            var enlarge_area = document.getElementById("enlarge-area");
+            reply_input.onclick = function() {
                 reply.classList.add("enlarge-reply");
                 reply_content.style.display = "none";
+                enlarge_area.style.display = "block";
+            }
+
+            //創建回覆取消鈕
+            var cancel_btn = document.getElementById("cancel-btn");
+            var enlarge_area = document.getElementById("enlarge-area");
+
+            cancel_btn.onclick = function() {
+                enlarge_area.style.display = "none";
+                reply.classList.remove("enlarge-reply");
+                reply_content.style.display = "block";
             }
         </script>
 </body>
