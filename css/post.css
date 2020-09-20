@@ -224,3 +224,43 @@ li.dropdown {
     padding: 19px 17px;
     width: 64px;
 }
+
+.main-body {
+    width: 680px;
+    margin: 0 auto;
+}
+
+#select-kbn {
+    font-size: 16px;
+    outline: none;
+    border-style: none;
+    background-color: rgb(219, 218, 218);
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.post-status {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 36.8px;
+    margin-top: 20px;
+}
+
+.post-status img {
+    width: 32px;
+    height: 30px;
+    background-color: rgb(144, 177, 240);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#select-status {
+    display: inline-block;
+    outline: none;
+    border-style: none;
+    vertical-align: middle;
+    height: 100%;
+}
