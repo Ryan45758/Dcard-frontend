@@ -234,12 +234,12 @@
                                 </div>
                                 <!-- 放大後回應欄，主要輸入區 -->
                                 <div class="enlarge-area" id="enlarge-area">
-                                    <form class="main-input-form">
+                                    <form class="main-input-form" id="main-input-form">
                                         <div class="top-main-input">
                                             <div class="post-status">
                                                 <img src="../img/male.svg">
                                                 <div class="status-text">
-                                                    <select>
+                                                    <select id="select">
                                                     <option value=""disabled selected hidden >選擇發文身分</option>
                                                     <option value="0">東海大學</option>
                                                     <option value="1">東海大學 資訊工程學系</option>
@@ -248,12 +248,12 @@
                                             </div>
                                         </div>
                                         <div class="main-input">
-                                            <textarea type="text" class="reply-input-area" spellcheck="false" placeholder="輸入回覆內容 ..."></textarea>
+                                            <textarea type="text" class="reply-input-area" id="reply-input-area" spellcheck="false" placeholder="輸入回覆內容 ..."></textarea>
                                         </div>
                                         <div class="main-btn">
                                             <div class="cs-group">
                                                 <button type="reset" class="cancel-btn" id="cancel-btn">取消</button>
-                                                <button type="submit" class="submit-btn">送出</button>
+                                                <button type="submit" class="submit-btn" onclick="check(); return false;">送出</button>
                                             </div>
                                         </div>
                                     </form>
@@ -362,6 +362,19 @@
                 enlarge_area.style.display = "none";
                 reply.classList.remove("enlarge-reply");
                 reply_content.style.display = "block";
+            }
+        </script>
+        <script>
+            //表單驗證
+            function check() {
+                var select = document.getElementById("select");
+                var reply_input_area = document.getElementById("reply-input-area");
+
+                if (select.value == "" || reply_input_area.value == "") {
+                    alert("請輸入發文身分及回覆內容");
+                    return false;
+                }
+                document.getElementById("main-input-form").submit();
             }
         </script>
 </body>
