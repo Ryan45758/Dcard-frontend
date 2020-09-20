@@ -1,0 +1,226 @@
+/* male色域   background-color: rgb(144, 177, 240);*/
+
+
+/* female色域 background: rgb(145, 107, 114); */
+
+
+/* 文字淡黑色 color: rgb(88, 87, 87); */
+
+html.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*For IE 6&7 only*/
+}
+
+body {
+    margin: 0px;
+    background-color: #00324E;
+    display: block;
+}
+
+.top-bar-wrapper {
+    background-color: #006AA6;
+    width: 100%;
+    top: 0;
+    height: 48px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+}
+
+.top-bar {
+    width: 1260px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.logosearch {
+    width: 880px;
+    height: 100%;
+    padding: 0px 16px;
+    position: relative;
+    left: 18px;
+}
+
+.logo {
+    width: 75px;
+    height: 48px;
+    display: inline-block;
+}
+
+.dcard_logo img {
+    margin: 0px auto;
+    display: block;
+    padding: 10px 0px;
+}
+
+.search-wrapper {
+    width: 607px;
+    height: 30px;
+    padding: 0px 32px 0px 0px;
+    display: inline-block;
+    top: -9px;
+    /* 搭配垂直置中使用 */
+    position: relative;
+    font-size: 14px;
+}
+
+.search {
+    width: 614px;
+    height: 30px;
+    padding: 0px 32px;
+}
+
+.search-inp {
+    width: 86%;
+    height: 26px;
+    border: 1px solid #00588A;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #00588A;
+    position: absolute;
+    top: 0px;
+    font-size: 14px;
+    color: white;
+    font-family: Microsoft JhengHei;
+    outline: none;
+    padding-left: 8px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 593px;
+    padding: 0px;
+    border: 1px solid #00588A;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #006AA6;
+    color: #ffffff;
+    /* 輸入框樣式 */
+    outline: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+ ::-webkit-input-placeholder {
+    /* Chrome, Safari */
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+::-webkit-textarea-placeholder {
+    /* Chrome, Safari */
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+.btngroup {
+    float: right;
+    width: 390px;
+    line-height: 10px;
+    margin-left: 20px;
+}
+
+.btngroup ul li {
+    float: left;
+    list-style: none;
+}
+
+.post-btn,
+.bell-btn,
+.mail-btn,
+.profile-btn,
+.card-btn,
+.dropbtn {
+    font-size: 18px;
+    color: white;
+    margin-right: 35px;
+}
+
+.dropbtn {
+    position: absolute;
+    text-decoration: none;
+    top: 21px;
+    position: fixed;
+}
+
+li.dropdown {
+    display: inline-block;
+    position: fixed;
+}
+
+.dropdown-content {
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    border-radius: 12px;
+    left: -50px;
+    top: 31px;
+    display: none;
+    z-index: 1;
+}
+
+.logout {
+    padding: 15px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-family: Microsoft JhengHei;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.show {
+    display: block;
+}
+
+.body-wrapper {
+    width: 100%;
+    height: 100%;
+    /* 讓register-wrapper遠離topbar */
+    margin-top: 48px;
+    z-index: 0;
+    display: inline-block;
+    background-color: white;
+}
+
+.body-content {
+    min-width: 840px;
+    min-height: calc(100vh - 48px);
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 0 auto;
+}
+
+.body-top {
+    width: 680px;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 1.5px solid rgb(204, 202, 202);
+}
+
+.post-article {
+    height: 20px;
+    padding: 19px 17px;
+    width: 64px;
+}
