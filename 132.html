@@ -1,102 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style type="text/css">
+    <meta charset="utf-8" />
 
-    </style>
+    <title>Dcard</title>
+    <link href="css/HomePage.css" rel="stylesheet" />
+    <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
+    <script src="../font.js"></script>
+
 </head>
 
 <body>
 
-    <div class="list-block loginBox">
-        <ul>
-            <!-- Text inputs -->
-            <li>
-                <div class="item-content">
-                    <div class="item-inner">
-                        <div class="item-title label">账号</div>
-                        <div class="item-input">
-                            <input type="text" placeholder="请输入手机号码" class="userTel" value="">
-                        </div>
-                    </div>
+    <!-- 創建外圍容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 創建內部容器 -->
+        <div class="top-bar">
+            <!-- 創建左側容器 -->
+            <div class="logosearch">
+                <!-- 插入logo圖片 -->
+                <div class="logo" width: 75px; height: 48px;>
+                    <a title="Dcard" class="dcard_logo" href="HomePage.html">
+                        <img src="../img/DcardLogo.svg" width: 74.43px height: 28px alt="Dcard">
+                    </a>
                 </div>
-            </li>
-            <li>
-                <div class="item-content">
-                    <div class="item-inner">
-                        <div class="item-title label">密码</div>
-                        <div class="item-input">
-                            <input type="password" placeholder="请输入6-20位字符" class="userPw" value="" maxlength="20">
-                        </div>
-                    </div>
+                <!-- 創建搜尋列容器 -->
+                <div class="search-wrapper">
+                    <form class="search" action="#">
+                        <!-- 創建搜尋輸入框 -->
+                        <input class="search-inp" type="text" placeholder="搜尋 未定事件簿">
+                        <!-- 創建搜尋鈕 -->
+                        <button class="search-btn" onclick="">
+                        <i class="far fa-search"></i>
+                    </button>
+                    </form>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <div class="content-block">
-        <div class="row">
-            <div class="col-100"><input type="submit" value="登录" id="login" class="button button-big button-fill button-danger disabled"></div>
+
+
+            </div>
+            <!-- 創建top-bar按鈕群組 -->
+            <div class="btngroup clearfix">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="post-btn" title="發文">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="bell-btn" title="通知">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="card-btn" title="抽卡">
+                            <i class="far fa-file-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mail-btn" title="訊息">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="profile-btn" title="個人資料">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()" title="更多">
+                        ▼
+                    </a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="index.html" class="logout">登出</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </div>
+
     <script>
-        require.config({
-            paths: {
-                "base": "../../js/base/base",
-                "secMenu": "../../js/base/secMenu",
-                "template": "../../js/base/template"
-            }
-        });
-        define(['base', 'template', 'secMenu'], function(base, template, secMenu) {
-            function userTel() {
-                regExp = /^1[3|4|5|7|8]\d{9}$/;
-                if ($(".userTel").val() == "") {
-                    $.toast('账号不能为空', 2000)
-                    return false;
-                } else if (!regExp.test($(".userTel").val())) {
-                    $.toast('账号格式错误', 2000)
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-            $(".userTel").blur(userTel);
+        /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                    toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-            //密码校验：6-20数字和英文的组合
-            function userPw() {
-                regExp = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/;
-                if ($(".userPw").val() == "") {
-                    $.toast('密码不能为空', 2000)
-                    return false;
-                } else if (!regExp.test($(".userPw").val())) {
-                    $.toast('密码格式错误', 2000)
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-            $(".userPw").blur(userPw);
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
 
-            var timer = -1;
-            $(".userTel,.userPw").bind("keyup", function(event) {
-                var val = $(this).val();
-                timer && clearTimeout(timer);
-                timer = setTimeout(function() {
-                    if (userTel() && userPw()) {
-                        $("#login").removeClass("disabled");
-                        return true;
-                    } else {
-                        $("#login").addClass("disabled");
-                        return false;
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var d = 0; d < dropdowns.length; d++) {
+                    var openDropdown = dropdowns[d];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
-                    //将值发送到服务器
-                    getCompList(val);
-                }, 1500);
-            })
-
-        });
+                }
+            }
+        }
     </script>
+
 </body>
 
 </html>

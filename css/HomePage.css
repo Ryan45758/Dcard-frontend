@@ -833,11 +833,11 @@ li.dropdown {
 .post-status {
     width: 300px;
     height: 36.8px;
-    cursor: pointer;
     padding: 16px 0px;
 }
 
-.post-status select {
+#select {
+    cursor: pointer;
     outline: none;
     display: inline-block;
     vertical-align: middle;

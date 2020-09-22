@@ -29,7 +29,7 @@ html.noscroll {
 
 body {
     margin: 0px;
-    background-color: #00324E;
+    background-color: white;
     display: block;
 }
 
@@ -195,7 +195,6 @@ li.dropdown {
 
 .body-wrapper {
     width: 100%;
-    height: 100%;
     /* 讓register-wrapper遠離topbar */
     margin-top: 48px;
     z-index: 0;
@@ -204,8 +203,7 @@ li.dropdown {
 }
 
 .body-content {
-    min-width: 840px;
-    min-height: calc(100vh - 48px);
+    min-width: 1060px;
     padding-top: 20px;
     padding-left: 80px;
     padding-right: 80px;
@@ -238,6 +236,7 @@ li.dropdown {
     border-radius: 5px;
     margin-top: 15px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .post-status {
@@ -263,4 +262,5 @@ li.dropdown {
     border-style: none;
     vertical-align: middle;
     height: 100%;
+    cursor: pointer;
 }
