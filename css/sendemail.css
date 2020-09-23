@@ -1,3 +1,17 @@
+/* male色域   background-color: rgb(144, 177, 240);*/
+
+
+/* female色域 background: rgb(145, 107, 114); */
+
+
+/* 文字淡黑色 color: rgb(88, 87, 87); */
+
+html.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: "";
@@ -16,25 +30,24 @@
 body {
     margin: 0px;
     background-color: #00324E;
-    position: relative;
-    overflow: scroll;
-    overflow-x: hidden;
+    display: block;
 }
 
 .top-bar-wrapper {
-    width: 100%;
     background-color: #006AA6;
+    width: 100%;
+    top: 0;
     height: 48px;
     margin: 0 auto;
-    display: inline-block;
+    position: fixed;
+    z-index: 1;
 }
 
 .top-bar {
-    width: 1280px;
+    width: 1260px;
     height: 100%;
-    display: flex;
     margin: auto;
-    padding: 0px 20px;
+    display: flex;
 }
 
 .logosearch {
@@ -141,10 +154,12 @@ body {
     position: absolute;
     text-decoration: none;
     top: 21px;
+    position: fixed;
 }
 
 li.dropdown {
     display: inline-block;
+    position: fixed;
 }
 
 .dropdown-content {
@@ -155,6 +170,7 @@ li.dropdown {
     left: -50px;
     top: 31px;
     display: none;
+    z-index: 1;
 }
 
 .logout {
@@ -173,8 +189,15 @@ li.dropdown {
 
 .email-wrapper {
     width: 100%;
+    height: 750px;
     /* 讓register-wrapper遠離topbar */
+    margin-top: 48px;
+    z-index: 0;
     display: inline-block;
+}
+
+.email-content-container {
+    min-width: 1260px;
 }
 
 .email-content {
