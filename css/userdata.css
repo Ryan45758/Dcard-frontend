@@ -188,7 +188,7 @@ li.dropdown {
     display: block;
 }
 
-.email-wrapper {
+.userdata-wrapper {
     width: 100%;
     /* 讓register-wrapper遠離topbar */
     margin-top: 48px;
@@ -196,44 +196,124 @@ li.dropdown {
     display: inline-block;
 }
 
-.email-content-container {
+.userdata-container {
     min-width: 1260px;
 }
 
-.email-content {
+.userdata {
     background-color: white;
-    width: 460px;
-    height: 384.8px;
+    width: 800px;
+    height: 600px;
     padding: 34px 20px 10px 20px;
     margin: 0 auto;
-    margin-top: 110px;
+    margin-top: 25px;
     border-radius: 12px;
 }
 
-.email-content img {
-    width: 250px;
-    height: 160px;
-    margin-left: 100px;
-}
-
-.email-content p {
-    font-family: Microsoft JhengHei;
+.top {
+    width: 100%;
+    height: 32.8px;
+    font-size: 24px;
     text-align: center;
 }
 
-.example {
-    color: #3397CF;
-    text-align: center;
-    font-size: 18px;
+.form-container {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
-.notget {
-    margin-top: 40px;
-    text-align: center;
+.real-name {
+    padding-bottom: 4px;
+    font-size: 14px;
 }
 
-.notget a {
-    color: #3397CF;
-    text-decoration: none;
-    font-family: Microsoft JhengHei;
+.name-input {
+    width: 100%;
+    padding: 0px 13px;
+    height: 42px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: 16px;
+}
+
+.sex {
+    padding: 10px 0px;
+    font-size: 14px;
+}
+
+.male {
+    width: 20px;
+    height: 20px;
+}
+
+.boy {
+    display: inline-block;
+    position: relative;
+    top: -3.5px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.female {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.girl {
+    display: inline-block;
+    position: relative;
+    top: -3.5px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.college {
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 4px;
+}
+
+.college-input {
+    width: 100%;
+    padding: 0px 13px;
+    height: 42px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: 16px;
+}
+
+.subject {
+    padding-top: 20px;
+    padding-bottom: 4px;
+}
+
+.subject-input {
+    width: 100%;
+    padding: 0px 13px;
+    height: 42px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: 16px;
+}
+
+.submit {
+    margin-top: 90px;
+    width: 528px;
+    height: 42px;
+    border-radius: 10px;
+    outline: none;
+    background: rgb(51, 151, 207);
+    border-style: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: rgb(58, 169, 233);
 }

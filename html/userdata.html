@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dcard</title>
-    <link href="../css/post.css" rel="stylesheet" />
+    <link href="../css/userdata.css" rel="stylesheet" />
     <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
     <script src="../font.js"></script>
-    <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
+
 </head>
 
 <body>
+
     <!-- 創建外圍容器 -->
     <div class="top-bar-wrapper">
         <!-- 創建內部容器 -->
@@ -39,7 +39,7 @@
 
 
             </div>
-            <!-- 創建top-bar按鈕群組 -->
+
             <div class="btngroup clearfix">
                 <ul>
                     <li>
@@ -79,59 +79,46 @@
             </div>
 
 
+
         </div>
     </div>
-    <div class="body-wrapper">
-        <div class="body-content">
-            <div class="body-top">
-                <div class="post-article">
-                    發表文章
-                </div>
-            </div>
-            <div class="main-body">
+    <div class="userdata-wrapper">
+        <div class="userdata-container">
+            <div class="userdata">
+                <div class="top">個人資料填寫</div>
                 <form id="main-input-form">
-                    <select id="select-kbn">
-                    <option value=""disabled selected hidden >點此選擇看板</option>
-                    <option value="0">感情</option>
-                    <option value="1">西斯</option>
-                    <option value="2">東海大學</option>
-                    </select>
-                    <div class="post-status">
-                        <!-- male -->
-                        <img src="../img/male.svg" alt="" class="post-ststus-male">
-                        <!-- female   <img src="../img/female.svg" alt="" class="post-ststus-female"> -->
-
-                        <select id="select-status">
-                            <option value=""disabled selected hidden >選擇發文身分</option>
-                            <option value="0">東海大學</option>
-                            <option value="1">東海大學 資訊工程學系</option>
-                        </select>
-                    </div>
-                    <div class="title-input">
-                        <textarea class="title" id="title" placeholder="標題" onkeyup="autogrow(this);"></textarea>
-                    </div>
-                    <div class="main-post">
-                        <textarea class="post" id="post" onkeyup="autogrow(this);"></textarea>
-                    </div>
-                    <div class="main-btn">
-                        <div class="cs-group">
-                            <button type="reset" class="cancel-btn" id="cancel-btn" onclick="goBack()">取消</button>
-                            <button type="submit" class="submit-btn" onclick="check(); return false;">送出</button>
-                        </div>
+                    <div class="form-container">
+                        <div class="real-name">真實姓名</div>
+                        <input type="text" class="name-input" placeholder="輸入真實姓名" id="name-input">
+                        <div class="sex">性別</div>
+                        <input type="radio" name="sex" value="male" class="male" id="male">
+                        <div class="boy">男性</div>
+                        <input type="radio" name="sex" value="female" class="female" id="female">
+                        <div class="girl">女性</div>
+                        <div class="college">學校</div>
+                        <input type="text" class="college-input" placeholder="輸入學校" id="college-input">
+                        <div class="subject">系所</div>
+                        <input type="text" class="subject-input" placeholder="輸入系所" id="subject-input">
+                        <input type="submit" class="submit" value="送出" onclick="check(); return false;">
                     </div>
                 </form>
             </div>
         </div>
+
+
     </div>
     <script>
-        //dropdown btn功能
+        /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
         function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById(" myDropdown ").classList.toggle("show ");
         }
+
+        // Close the dropdown if the user clicks outside of it
         window.onclick = function(e) {
             if (!e.target.matches('.dropbtn')) {
 
-                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var dropdowns = document.getElementsByClassName("dropdown-content ");
                 for (var d = 0; d < dropdowns.length; d++) {
                     var openDropdown = dropdowns[d];
                     if (openDropdown.classList.contains('show')) {
@@ -142,33 +129,16 @@
         }
     </script>
     <script>
-        //textarea自動高度
-        function autogrow(textarea) {
-            var adjustedHeight = textarea.clientHeight;
-
-            adjustedHeight = Math.max(textarea.scrollHeight, adjustedHeight);
-            if (adjustedHeight > textarea.clientHeight) {
-                textarea.style.height = adjustedHeight + 'px';
-            }
-
-        }
-    </script>
-    <script>
-        //取消回上頁
-        function goBack() {
-            window.history.back();
-        }
-    </script>
-    <script>
         //表單驗證
         function check() {
-            var select_kbn = document.getElementById("select-kbn");
-            var select_status = document.getElementById("select-status");
-            var title = document.getElementById("title");
-            var post = document.getElementById("post");
+            var name_input = document.getElementById("name-input");
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+            var college_input = document.getElementById("college-input");
+            var subject_input = document.getElementById("subject-input");
 
-            if (select_kbn.value == "" || select_status.value == "" || title.value == "" || post.value == "") {
-                alert("請選擇看板、選擇發文身分、輸入標題、輸入內容");
+            if (name_input.value == " " || male.value == " " || female.value == " " || college_input.value == " " || subject_input.value == " ") {
+                alert("請選擇看板、選擇發文身分、輸入標題、輸入內容 ");
                 return false;
             }
             document.getElementById("main-input-form").submit();
