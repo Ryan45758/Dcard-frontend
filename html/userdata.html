@@ -108,17 +108,14 @@
 
     </div>
     <script>
-        /* When the user clicks on the button, 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
+        //dropdown btn功能
         function myFunction() {
-            document.getElementById(" myDropdown ").classList.toggle("show ");
+            document.getElementById("myDropdown").classList.toggle("show");
         }
-
-        // Close the dropdown if the user clicks outside of it
         window.onclick = function(e) {
             if (!e.target.matches('.dropbtn')) {
 
-                var dropdowns = document.getElementsByClassName("dropdown-content ");
+                var dropdowns = document.getElementsByClassName("dropdown-content");
                 for (var d = 0; d < dropdowns.length; d++) {
                     var openDropdown = dropdowns[d];
                     if (openDropdown.classList.contains('show')) {
@@ -137,8 +134,8 @@
             var college_input = document.getElementById("college-input");
             var subject_input = document.getElementById("subject-input");
 
-            if (name_input.value == " " || male.value == " " || female.value == " " || college_input.value == " " || subject_input.value == " ") {
-                alert("請選擇看板、選擇發文身分、輸入標題、輸入內容 ");
+            if (name_input.value == "" || male.checked == false && female.checked == false || college_input.value == "" || subject_input.value == "") {
+                alert("請輸入姓名、性別、學校、系所");
                 return false;
             }
             document.getElementById("main-input-form").submit();
