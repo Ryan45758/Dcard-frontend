@@ -94,17 +94,30 @@
                     <option value=""disabled selected hidden >點此選擇看板</option>
                     <option value="0">感情</option>
                     <option value="1">西斯</option>
-                    <option value="1">東海大學</option>
+                    <option value="2">東海大學</option>
                     </select>
                     <div class="post-status">
-                        <img src="../img/male.svg">
+                        <!-- male -->
+                        <img src="../img/male.svg" alt="" class="post-ststus-male">
+                        <!-- female   <img src="../img/female.svg" alt="" class="post-ststus-female"> -->
 
                         <select id="select-status">
                             <option value=""disabled selected hidden >選擇發文身分</option>
                             <option value="0">東海大學</option>
                             <option value="1">東海大學 資訊工程學系</option>
                         </select>
-
+                    </div>
+                    <div class="title-input">
+                        <textarea class="title" id="title" placeholder="標題" onkeyup="autogrow(this);"></textarea>
+                    </div>
+                    <div class="main-post">
+                        <textarea class="post" id="post" onkeyup="autogrow(this);"></textarea>
+                    </div>
+                    <div class="main-btn">
+                        <div class="cs-group">
+                            <button type="reset" class="cancel-btn" id="cancel-btn" onclick="goBack()">取消</button>
+                            <button type="submit" class="submit-btn" onclick="check(); return false;">送出</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -126,6 +139,39 @@
                     }
                 }
             }
+        }
+    </script>
+    <script>
+        //textarea自動高度
+        function autogrow(textarea) {
+            var adjustedHeight = textarea.clientHeight;
+
+            adjustedHeight = Math.max(textarea.scrollHeight, adjustedHeight);
+            if (adjustedHeight > textarea.clientHeight) {
+                textarea.style.height = adjustedHeight + 'px';
+            }
+
+        }
+    </script>
+    <script>
+        //取消回上頁
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script>
+        //表單驗證
+        function check() {
+            var select_kbn = document.getElementById("select-kbn");
+            var select_status = document.getElementById("select-status");
+            var title = document.getElementById("title");
+            var post = document.getElementById("post");
+
+            if (select_kbn.value == "" || select_status.value == "" || title.value() == "" || post.value() == "") {
+                alert("請選擇看板、選擇發文身分、輸入標題、輸入內容");
+                return false;
+            }
+            document.getElementById("main-input-form").submit();
         }
     </script>
 </body>
