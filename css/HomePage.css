@@ -6,31 +6,11 @@
 
 /* 文字淡黑色 color: rgb(88, 87, 87); */
 
-html.noscroll {
-    position: fixed;
-    overflow-y: scroll;
-    width: 100%;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-    /*For IE 6&7 only*/
-}
-
 body {
     margin: 0px;
     background-color: #00324E;
     display: block;
+    overflow-y: scroll;
 }
 
 .top-bar-wrapper {
@@ -216,7 +196,6 @@ li.dropdown {
 
 .kanban-list {
     width: 208px;
-    height: 100%;
     background-color: transparent;
 }
 
@@ -228,10 +207,18 @@ li.dropdown {
 }
 
 .all-kanban {
-    width: 178px;
+    width: 198.63px;
     height: 44px;
-    padding: 0px 20px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.all-kanban:hover {
+    background-color: rgb(14, 41, 58);
+}
+
+.all-kanban-container {
+    padding-top: 13px;
+    padding-left: 20px;
 }
 
 #font {
@@ -240,7 +227,7 @@ li.dropdown {
 }
 
 .kanban-container {
-    width: 220px;
+    width: 208px;
 }
 
 .mylove-kanban {
@@ -255,7 +242,7 @@ li.dropdown {
     height: 44px;
     color: #547688;
     line-height: 50px;
-    padding: 0px 20px;
+    padding-left: 20px;
 }
 
 .kanban-mylove {
@@ -263,7 +250,6 @@ li.dropdown {
     height: 44px;
     color: rgba(255, 255, 255, 0.7);
     display: inline-block;
-    padding: 0px 20px;
     text-decoration: none;
 }
 
@@ -280,6 +266,11 @@ li.dropdown {
     width: 179.1px;
     height: 44px;
     vertical-align: middle;
+    padding-left: 20px;
+}
+
+.kanban-text:hover {
+    background-color: rgb(14, 41, 58);
 }
 
 #font-1 {
