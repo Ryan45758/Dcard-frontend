@@ -117,31 +117,38 @@
             </div>
             <div class="article-wrapper">
                 <div class="article-area">
+                    <div class="main-all-kanban">
+                        <div class="all-kanban-font">全部看板</div>
+                        <div class="kaban-alllist">
+                            <img src="../img/kanban_icon.jpeg" class="kaban-alllist-img">
+                            <div class="kanban-name">
+                                東海大學
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-
         </div>
+    </div>
+    <script>
+        //dropdown btn功能
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
 
-
-        <script>
-            //dropdown btn功能
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-            window.onclick = function(e) {
-                if (!e.target.matches('.dropbtn')) {
-
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    for (var d = 0; d < dropdowns.length; d++) {
-                        var openDropdown = dropdowns[d];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var d = 0; d < dropdowns.length; d++) {
+                    var openDropdown = dropdowns[d];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
                     }
                 }
             }
-        </script>
+        }
+    </script>
 
 </body>
 
