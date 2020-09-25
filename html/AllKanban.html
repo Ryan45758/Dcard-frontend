@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dcard</title>
+    <link href="../css/AllKanban.css" rel="stylesheet" />
+    <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
+    <script src="../font.js"></script>
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.11.0.js'></script>
+</head>
+
+<body>
+
+    <!-- 創建外圍容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 創建內部容器 -->
+        <div class="top-bar">
+            <!-- 創建左側容器 -->
+            <div class="logosearch">
+                <!-- 插入logo圖片 -->
+                <div class="logo" width: 75px; height: 48px;>
+                    <a title="Dcard" class="dcard_logo" href="HomePage.html">
+                        <img src="../img/DcardLogo.svg" width: 74.43px height: 28px alt="Dcard">
+                    </a>
+                </div>
+                <!-- 創建搜尋列容器 -->
+                <div class="search-wrapper">
+                    <form class="search" action="#">
+                        <!-- 創建搜尋輸入框 -->
+                        <input class="search-inp" type="text" placeholder="搜尋 未定事件簿">
+                        <!-- 創建搜尋鈕 -->
+                        <button class="search-btn" onclick="">
+                            <i class="far fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
+            <!-- 創建top-bar按鈕群組 -->
+            <div class="btngroup clearfix">
+                <ul>
+                    <li>
+                        <a href="javascript:;" class="post-btn" title="發文">
+                            <i class="fas fa-pen"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="bell-btn" title="通知">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="card-btn" title="抽卡">
+                            <i class="far fa-file-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="mail-btn" title="訊息">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="profile-btn" title="個人資料">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()" title="更多">
+                            ▼
+                        </a>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="index.html" class="logout">登出</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="body-wrapper">
+        <div class="body-content">
+            <div class="kanban-list" style="display: inline-block; position: fixed;">
+                <a href="" class="all-kanban-link">
+
+                    <div class="all-kanban">
+                        <div class="all-kanban-container">
+                            <i class="fas fa-list-alt" id="font"></i> &nbsp;所有看板
+                        </div>
+                    </div>
+                </a>
+                <div class="kanban-container">
+                    <div class="mylove">
+                        我追蹤的看板
+                    </div>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 感情
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 東海大學
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 軟體工程
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="article-wrapper">
+                <div class="article-area">
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            //dropdown btn功能
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var d = 0; d < dropdowns.length; d++) {
+                        var openDropdown = dropdowns[d];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
+</body>
+
+</html>
