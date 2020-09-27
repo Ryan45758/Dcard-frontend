@@ -101,16 +101,14 @@ body {
     font-size: 15px;
 }
 
+.register-div {
+    padding-top: 15px;
+    margin-left: 200px;
+}
+
 .register {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    height: 100%;
-    position: relative;
-    left: 18.5%;
     text-decoration: none;
-    font-family: Microsoft JhengHei;
+    color: white;
     font-size: 14px;
 }
 

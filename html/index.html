@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dcard</title>
     <link href="../css/index.css" rel="stylesheet" />
     <link rel="icon" href="../img/DcardLogoTitle.ico" type="image/x-icon" />
@@ -20,7 +19,7 @@
             <div class="logosearch">
                 <!-- 插入logo圖片 -->
                 <div class="logo" width: 75px; height: 48px;>
-                    <a title="Dcard" class="dcard_logo" href="RegisterPage.html">
+                    <a title="Dcard" class="dcard_logo" href="HomePage.html">
                         <img src="../img/DcardLogo.svg" width: 74.43px height: 28px alt="Dcard">
                     </a>
                 </div>
@@ -30,21 +29,319 @@
                         <!-- 創建搜尋輸入框 -->
                         <input class="search-inp" type="text" placeholder="搜尋 未定事件簿">
                         <!-- 創建搜尋鈕 -->
-                        <button class="search-btn" type="submit">
+                        <button class="search-btn" onclick="">
                             <i class="far fa-search"></i>
                         </button>
                     </form>
                 </div>
+
+
+            </div>
+            <div class="register-div">
+                <a href="#" class="register" role="button">註冊 / 登入</a>
             </div>
 
-            <a href="RegisterPage.html" class="register" role="button">註冊 / 登入</a>
+
 
         </div>
     </div>
-    <div class="body-content">
+    <div class="body-wrapper">
+        <div class="body-content">
+            <div class="kanban-list" style="display: inline-block; position: fixed;">
+                <a href="" class="all-kanban-link">
 
-    </div>
+                    <div class="all-kanban">
+                        <div class="all-kanban-container">
+                            <i class="fas fa-list-alt" id="font"></i> &nbsp;所有看板
+                        </div>
+                    </div>
+                </a>
+                <div class="kanban-container">
+                    <div class="mylove">
+                        我追蹤的看板
+                    </div>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 感情
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 東海大學
+                        </div>
+                    </a>
+                    <a href="" class="kanban-mylove">
+                        <div class="kanban-text">
+                            <img src="../img/kanban_icon.jpeg"> 軟體工程
+                        </div>
+                    </a>
+                </div>
 
+            </div>
+            <div class="article-wrapper">
+                <div class="article-area">
+                    <div class="top-div" id="top-div">
+                        <div class="all-div">
+                            <a href="" class="all">全部</a>
+                        </div>
+                        <div class="follow-div">
+                            <a href="" class="follow">追蹤</a>
+                        </div>
+
+                    </div>
+                    <!-- 增加空白處 -->
+                    <div class="post-space"></div>
+                    <article id='post-zone'>
+                        <div class="post">
+                            <a href="javascript:;" class="link" style="display: inline-block; width: 608px; height: 100%; padding:0px 20px; text-decoration: none; border-top-style: solid;
+                            border-top-width: 1px;
+                            border-top-color: #e9e5e5;" id="myBtn">
+                                <div class="post-link">
+                                    <div class="top">
+                                        <div class="sex">
+                                            <!-- male -->
+                                            <img src="../img/male.svg" alt="男" class="post-male">
+                                            <!-- female    <img src="../img/female.svg" alt="男" class="post-female">  -->
+                                        </div>
+                                        <div class="kanban">西斯&ensp;·</div>
+                                        <div class="college">東海大學</div>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="title">#二更 西斯版讓我大開眼界</div>
+                                        <div class="content">西斯版果然不愧是低卡最猛的版 有人想看孕婦片 底下直接有孕婦喊play one 刷新我三觀😳😳真的是扯翻天
+                                        </div>
+                                    </div>
+                                    <div class="bottom" style="display: inline-block;">
+                                        <div class="good" style="display: inline-block;">
+                                            <img src="../img/heart.png" alt="愛心" style="width:16px;height:16px; border-radius:50%; vertical-align: middle;">
+                                            <div class="count" style="display: inline-block; color: rgb(161, 158, 158); font-size: 14px; vertical-align: middle;padding-left: 4px;">6023</div>
+                                        </div>
+                                        <div class="comment">
+                                            回應 607
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <header>
+                                <!-- male -->
+                                <img src="../img/male.svg" alt="" class="modal-male">
+                                <!-- female   <img src="../img/female.svg" alt="" class="modal-female"> -->
+                                <div class="modal-college">東海大學</div>
+                                <span class="close">&times;</span>
+                            </header>
+
+                            <div class="article-body">
+                                <div class="article-title">
+                                    現在美妝版的人到底有什麼毛病
+                                </div>
+                                <div class="article-type-div">
+                                    <a href="">美妝</a>
+                                    <div class="time">·&ensp;9月4日 00:17</div>
+                                </div>
+                                <div class="atricle-span">
+                                    如標題 我真的覺得現在美妝版有夠不友善欸？<br> 到處都是酸民 我真的很懷念以前美妝版太平的時候 <br>有時候看到一篇文章不錯 滑一滑看到酸民留言 <br>整個感覺就不對了 不知道那些人到底在想什麼<br> 而且那種惡意留言通常讚數都超高 <br>認真不懂這些讚同惡意留言的人到底是怎樣💁🏻‍♀️<br> 舉幾個例子 1、<br> 例如我身邊有些朋友分享產品<br> 都被留言底下說過業配 就算放發票圖也會被酸業<br>                                    啊我就真的不懂了 人家認真分享 你沒有證據<br> 開口閉口就說人家業 也有朋友因為這樣被誤刪文章 <br>真的讓人覺得這些人吃飽太閒 🙄🙄🙄<br> 就是因為這些人讓很多人想分享產品都不敢發文 <br>誰知道哪個全身都酸溜溜的酸民在那邊留言
+                                </div>
+                                <div class="heart-area">
+                                    <img src="../img/heart.png" style="display: inline-block;">
+                                    <div class="heart-count">6071</div>
+                                    <div class="article-comment">·&ensp;回應 284</div>
+                                    <div class="heart" onclick="heart()" id="heart">
+                                        <i class="fas fa-heart" class="heart-font"></i>
+                                    </div>
+                                    <div class="hearted" id="hearted">
+                                        <img src="../img/heart.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="comment-area">
+                                <div class="all-comment-container">
+                                    <div class="all-comment">
+                                        共有217則回應
+                                    </div>
+                                </div>
+                                <div class="comment-area-container">
+                                    <div class="comment-area-comment">
+                                        <div class="comment-area-top">
+                                            <img src="../img/male.svg">
+                                            <div class="comment-college-time">
+                                                <div class="comment-college">國立高雄師範大學</div>
+                                                <div class="comment-time">B1 | 9月6日 04:57</div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-body">1231321313</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 創建footer讓回應欄有空間下拉 -->
+                            <div class="footer">
+                            </div>
+                            <!-- 創建回應欄 -->
+                            <div class="reply" id="reply">
+                                <div class="reply-content" id="reply-content">
+                                    <div class="reply-area">
+                                        <img src="../img/male.svg" class="reply-male">
+                                        <div class="reply-input" id="reply-input">
+                                            回應...
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- 放大後回應欄，主要輸入區 -->
+                                <div class="enlarge-area" id="enlarge-area">
+                                    <form class="main-input-form" id="main-input-form">
+                                        <div class="top-main-input">
+                                            <div class="post-status">
+                                                <img src="../img/male.svg">
+                                                <div class="status-text">
+                                                    <select id="select">
+                                                    <option value=""disabled selected hidden >選擇發文身分</option>
+                                                    <option value="0">東海大學</option>
+                                                    <option value="1">東海大學 資訊工程學系</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-input">
+                                            <textarea type="text" class="reply-input-area" id="reply-input-area" spellcheck="false" placeholder="輸入回覆內容 ..."></textarea>
+                                        </div>
+                                        <div class="main-btn">
+                                            <div class="cs-group">
+                                                <button type="reset" class="cancel-btn" id="cancel-btn">取消</button>
+                                                <button type="submit" class="submit-btn" onclick="check(); return false;">送出</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end modal -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            //dropdown btn功能
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var d = 0; d < dropdowns.length; d++) {
+                        var openDropdown = dropdowns[d];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+        <script>
+            //全部|追蹤的sticky function
+            window.onscroll = function() {
+                stickyFunction()
+            };
+            var navbar = document.getElementById("top-div");
+            var sticky = navbar.offsetTop;
+
+            function stickyFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+
+            }
+        </script>
+        <script>
+            //modal互動式function
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+
+            // 點擊打開modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+
+            }
+
+            // 點擊X關閉modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // 點擊modal以外隱藏modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <script>
+            //點擊愛心fucnction
+            var heart = document.getElementById("heart");
+            var hearted = document.getElementById("hearted");
+            heart.onclick = function() {
+                heart.style.display = "none";
+                hearted.style.display = "block";
+            }
+            hearted.onclick = function() {
+                hearted.style.display = "none";
+                heart.style.display = "block";
+            }
+        </script>
+        <script>
+            //創建點擊回覆彈出框
+            var reply = document.getElementById("reply");
+            var reply_input = document.getElementById("reply-input");
+            var reply_content = document.getElementById("reply-content")
+            var enlarge_area = document.getElementById("enlarge-area");
+            reply_input.onclick = function() {
+                reply.classList.add("enlarge-reply");
+                reply_content.style.display = "none";
+                enlarge_area.style.display = "block";
+            }
+
+            //創建回覆取消鈕
+            var cancel_btn = document.getElementById("cancel-btn");
+            var enlarge_area = document.getElementById("enlarge-area");
+
+            cancel_btn.onclick = function() {
+                enlarge_area.style.display = "none";
+                reply.classList.remove("enlarge-reply");
+                reply_content.style.display = "block";
+            }
+        </script>
+        <script>
+            //表單驗證
+            function check() {
+                var select = document.getElementById("select");
+                var reply_input_area = document.getElementById("reply-input-area");
+
+                if (select.value == "" || reply_input_area.value == "") {
+                    alert("請輸入發文身分及回覆內容");
+                    return false;
+                }
+                document.getElementById("main-input-form").submit();
+            }
+        </script>
 </body>
 
 </html>
